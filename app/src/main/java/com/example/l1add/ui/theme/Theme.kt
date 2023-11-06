@@ -28,7 +28,7 @@ object L1ADDTheme {
 
     object TextColors {
         val description
-            get() = Color(0xFFEEF2FB)
+            get() = Color(0xB3EEF2FB)
         val title
             get() = Color(0xFFFFFFFF)
         val downloads
@@ -44,6 +44,19 @@ object L1ADDTheme {
                 fontFamily = FontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 12.sp,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional,
+                    LineHeightStyle.Trim.None,
+                )
+            )
+        val Regular_12_19
+            @Composable
+            get() = TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Normal,
+                fontSize = 12.sp,
+                lineHeight = 19.sp,
                 platformStyle = PlatformTextStyle(includeFontPadding = false),
                 lineHeightStyle = LineHeightStyle(
                     LineHeightStyle.Alignment.Proportional,

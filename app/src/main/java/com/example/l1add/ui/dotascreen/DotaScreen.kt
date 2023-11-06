@@ -8,7 +8,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.material3.Text
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.example.l1add.R
+import com.example.l1add.ui.theme.L1ADDTheme
 
 @Preview
 @Composable
@@ -27,6 +31,18 @@ fun DotaScreen() {
                 DotaGameTypes(
                     listOf("MOBA", "MULTIPLAYER", "STRATEGY"),
                     Modifier.padding(top = 16.dp))
+            }
+            item {
+                Text(
+                    text = stringResource(R.string.description),
+                    style = L1ADDTheme.TextStyle.Regular_12_19,
+                    color = L1ADDTheme.TextColors.description,
+                    modifier = Modifier.padding(
+                        start = 21.dp,
+                        end = 21.dp,
+                        top = 30.dp,
+                    )
+                )
             }
             item {
                 // video and pictures
