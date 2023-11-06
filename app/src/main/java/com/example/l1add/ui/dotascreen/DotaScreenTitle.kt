@@ -15,24 +15,22 @@ import com.example.l1add.ui.theme.L1ADDTheme
 
 @Composable
 fun DotaScreenTitle(modifier: Modifier = Modifier) {
-    Box(modifier) {
-        Row {
-            Box(modifier.padding(bottom = 7.dp)) {
-                DotaLogo()
-            }
-            Column(modifier
-                .padding(start = 12.dp, top = 34.dp)
-            ) {
-                Text(
-                    text = stringResource(R.string.dota_title),
-                    color = L1ADDTheme.TextColors.title,
-                    style = L1ADDTheme.TextStyle.Bold_20,
-                )
-                DotaRating(
-                    rating = 4.9,
-                    modifier = modifier.padding(top = 6.dp),
-                )
-            }
+    Row(modifier) {
+        Box(Modifier.padding(bottom = 7.dp)) {
+            DotaLogo()
+        }
+        Column(Modifier
+            .padding(start = 12.dp, top = 34.dp)
+        ) {
+            Text(
+                text = stringResource(R.string.dota_title),
+                color = L1ADDTheme.TextColors.title,
+                style = L1ADDTheme.TextStyle.Bold_20,
+            )
+            DotaRating(
+                rating = 4.9,
+                modifier = Modifier.padding(top = 6.dp),
+            )
         }
     }
 }

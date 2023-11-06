@@ -19,7 +19,7 @@ fun DotaRating(rating: Double, modifier: Modifier = Modifier) {
     Row(modifier) {
         RatingBar(
             rating = rating,
-            modifier = modifier
+            modifier = Modifier
                 .height(14.dp)
                 .width(76.dp)
         )
@@ -27,7 +27,7 @@ fun DotaRating(rating: Double, modifier: Modifier = Modifier) {
             text = stringResource(R.string.n_downloads),
             style = L1ADDTheme.TextStyle.Regular_12,
             color = L1ADDTheme.TextColors.downloads,
-            modifier = modifier.padding(start = 10.dp)
+            modifier = Modifier.padding(start = 10.dp)
         )
     }
 }
