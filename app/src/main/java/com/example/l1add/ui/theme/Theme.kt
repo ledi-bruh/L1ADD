@@ -17,6 +17,8 @@ object L1ADDTheme {
             get() = Color(0xFF000000)
         val logo_border
             get() = Color(0xFF1F2430)
+        val game_type
+            get() = Color(0x3D44A9F4)
     }
 
     object ButtonColors {
@@ -31,6 +33,8 @@ object L1ADDTheme {
             get() = Color(0xFFFFFFFF)
         val downloads
             get() = Color(0xFF45454D)
+        val game_type
+            get() = Color(0xFF44A9F4)
     }
 
     object TextStyle {
@@ -40,6 +44,19 @@ object L1ADDTheme {
                 fontFamily = FontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 12.sp,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional,
+                    LineHeightStyle.Trim.None,
+                )
+            )
+        val Medium_10_12
+            @Composable
+            get() = TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Normal,
+                fontSize = 10.sp,
+                lineHeight = 12.sp,
                 platformStyle = PlatformTextStyle(includeFontPadding = false),
                 lineHeightStyle = LineHeightStyle(
                     LineHeightStyle.Alignment.Proportional,
