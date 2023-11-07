@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.l1add.components.RatingBar
 import com.example.l1add.ui.theme.L1ADDTheme
 
@@ -23,7 +24,7 @@ fun DotaRating(rating: Double, modifier: Modifier = Modifier) {
         )
         Text(
             text = "70M",
-            style = L1ADDTheme.TextStyle.Regular_12,
+            style = L1ADDTheme.TextStyle.regular(12.sp, 14.sp),
             color = L1ADDTheme.TextColors.downloads,
             modifier = Modifier.padding(start = 10.dp)
         )
