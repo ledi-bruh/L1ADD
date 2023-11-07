@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -15,7 +16,6 @@ import androidx.compose.ui.unit.sp
 import com.example.l1add.R
 import com.example.l1add.ui.theme.L1ADDTheme
 
-@Preview
 @Composable
 fun DotaScreen() {
     LazyColumn(
@@ -44,7 +44,13 @@ fun DotaScreen() {
             )
         }
         item {
-            // video and pictures
+            DotaGameViews(
+                gameViews = listOf(
+                    R.drawable.video_view1,
+                    R.drawable.video_view1,
+                ),
+                modifier = Modifier.padding(top = 18.dp)
+            )
         }
         item {
             // rating
@@ -65,5 +71,13 @@ fun DotaScreen() {
                     .fillMaxWidth()
             )
         }
+    }
+}
+
+@Preview
+@Composable
+fun DotaScreenPreview() {
+    Surface(color = L1ADDTheme.BgColors.dark) {
+        DotaScreen()
     }
 }

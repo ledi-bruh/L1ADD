@@ -24,6 +24,8 @@ object L1ADDTheme {
     object ButtonColors {
         val yellow
             get() = Color(0xFFF4D144)
+        val white
+            get() = Color(0xFFFFFFFF)
     }
 
     object TextColors {
