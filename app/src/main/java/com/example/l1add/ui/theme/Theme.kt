@@ -31,6 +31,8 @@ object L1ADDTheme {
     object TextColors {
         val description
             get() = Color(0xB3EEF2FB)
+        val review_ratings
+            get() = Color(0xFFEEF2FB)
         val title
             get() = Color(0xFFFFFFFF)
         val downloads
@@ -39,6 +41,8 @@ object L1ADDTheme {
             get() = Color(0xFF44A9F4)
         val install
             get() = Color(0xFF050B18)
+        val reviews
+            get() = Color(0xFFA8ADB7)
     }
 
     object TextStyle {

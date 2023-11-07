@@ -53,7 +53,11 @@ fun DotaScreen() {
             )
         }
         item {
-            // rating
+            DotaReviewRatings(Modifier.padding(
+                start = 24.dp,
+                top = 24.dp,
+                end = 24.dp,
+            ))
         }
         item {
             // comments
