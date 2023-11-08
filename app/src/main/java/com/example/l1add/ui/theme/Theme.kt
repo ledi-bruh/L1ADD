@@ -19,6 +19,8 @@ object L1ADDTheme {
             get() = Color(0xFF1F2430)
         val game_type
             get() = Color(0x3D44A9F4)
+        val comment_divider
+            get() = Color(0xFF1A1F29)
     }
 
     object ButtonColors {
@@ -42,6 +44,12 @@ object L1ADDTheme {
         val install
             get() = Color(0xFF050B18)
         val reviews
+            get() = Color(0xFFA8ADB7)
+        val comment_created_by_name
+            get() = Color(0xFFFFFFFF)
+        val comment_created_at
+            get() = Color(0x66FFFFFF)
+        val comment_message
             get() = Color(0xFFA8ADB7)
     }
 

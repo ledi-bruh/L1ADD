@@ -1,4 +1,4 @@
-package com.example.l1add.ui.dotascreen
+package com.example.l1add.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.material3.Button

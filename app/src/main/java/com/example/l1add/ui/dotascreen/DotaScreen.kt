@@ -8,12 +8,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.l1add.R
+import com.example.l1add.components.SimpleButton
+import com.example.l1add.components.comments
 import com.example.l1add.ui.theme.L1ADDTheme
 
 @Composable
@@ -47,7 +51,7 @@ fun DotaScreen() {
             DotaGameViews(
                 gameViews = listOf(
                     R.drawable.video_view1,
-                    R.drawable.video_view1,
+                    R.drawable.video_view2,
                 ),
                 modifier = Modifier.padding(top = 18.dp)
             )
@@ -55,12 +59,33 @@ fun DotaScreen() {
         item {
             DotaReviewRatings(Modifier.padding(
                 start = 24.dp,
-                top = 24.dp,
                 end = 24.dp,
+                top = 24.dp,
+                bottom = 30.dp,
             ))
         }
-        item {
-            // comments
+        itemsIndexed(comments) { index, comment ->
+            DotaComment(
+                comment = comment,
+                modifier = Modifier
+                    .padding(
+                        start = 24.dp,
+                        end = 24.dp,
+                    )
+            )
+            if (index < comments.lastIndex) {
+                Divider(
+                    thickness = 1.dp,
+                    color = L1ADDTheme.BgColors.comment_divider,
+                    modifier = Modifier
+                        .padding(
+                            start = 38.dp,
+                            end = 38.dp,
+                            top = 24.dp,
+                            bottom = 24.dp,
+                        )
+                )
+            }
         }
         item {
             SimpleButton(
@@ -70,7 +95,8 @@ fun DotaScreen() {
                     .padding(
                         start = 24.dp,
                         end = 24.dp,
-                        bottom = 32.dp,
+                        top = 40.dp,
+                        bottom = 38.dp,
                     )
                     .fillMaxWidth()
             )
