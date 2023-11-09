@@ -87,7 +87,7 @@ fun GameView(
             Icon(
                 imageVector = Icons.Rounded.PlayArrow,
                 contentDescription = "play view",
-                tint = L1ADDTheme.ButtonColors.white,
+                tint = L1ADDTheme.ButtonColors.play_video,
                 modifier = Modifier
                     .align(Alignment.Center)
             )

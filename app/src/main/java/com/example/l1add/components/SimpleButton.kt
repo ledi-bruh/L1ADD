@@ -23,7 +23,7 @@ fun SimpleButton(
         onClick = onClick,
         shape = RoundedCornerShape(12.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = L1ADDTheme.ButtonColors.yellow,
+            containerColor = L1ADDTheme.ButtonColors.install,
             contentColor = L1ADDTheme.TextColors.install,
         ),
         elevation = ButtonDefaults.buttonElevation(

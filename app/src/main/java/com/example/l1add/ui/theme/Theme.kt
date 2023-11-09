@@ -21,12 +21,16 @@ object L1ADDTheme {
             get() = Color(0x3D44A9F4)
         val comment_divider
             get() = Color(0xFF1A1F29)
+        val star_on
+            get() = Color(0xFFF4D144)
+        val star_off
+            get() = Color(0xFF282E3E)
     }
 
     object ButtonColors {
-        val yellow
+        val install
             get() = Color(0xFFF4D144)
-        val white
+        val play_video
             get() = Color(0xFFFFFFFF)
     }
 
