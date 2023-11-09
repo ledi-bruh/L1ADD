@@ -23,13 +23,13 @@ fun DotaLogo(modifier: Modifier = Modifier) {
         .clip(RoundedCornerShape(14.dp))
         .background(color = L1ADDTheme.BgColors.logo_border)
     ) {
-        Box(modifier
+        Box(Modifier
             .size(84.dp)
             .clip(RoundedCornerShape(13.dp))
             .background(color = L1ADDTheme.BgColors.black)
             .align(Alignment.Center)
         ) {
-            Box(modifier.align(Alignment.Center)) {
+            Box(Modifier.align(Alignment.Center)) {
                 Image(
                     painter = painterResource(R.drawable.dota_logo),
                     contentDescription = "dota_cube_logo",

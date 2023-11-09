@@ -1,17 +1,21 @@
 package com.example.l1add.ui.dotascreen
 
+import android.widget.Toast
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -22,16 +26,20 @@ import com.example.l1add.ui.theme.L1ADDTheme
 
 @Composable
 fun DotaScreen() {
+    val context = LocalContext.current
+    val lazyListState = rememberLazyListState()
+
     LazyColumn(
-        state = LazyListState(),
+        state = lazyListState,
         modifier = Modifier.fillMaxSize(),
     ) {
         item {
-            DotaScreenHeader()
+            DotaScreenHeader(painterResource(R.drawable.dota_backgroud))
         }
         item {
             DotaGameTypes(
                 listOf("MOBA", "MULTIPLAYER", "STRATEGY"),
+                PaddingValues(start = 24.dp, end = 24.dp),
                 Modifier.padding(top = 16.dp)
             )
         }
@@ -53,6 +61,7 @@ fun DotaScreen() {
                     R.drawable.video_view1,
                     R.drawable.video_view2,
                 ),
+                contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
                 modifier = Modifier.padding(top = 18.dp)
             )
         }
@@ -90,7 +99,7 @@ fun DotaScreen() {
         item {
             SimpleButton(
                 text = stringResource(R.string.install),
-                onClick = {},
+                onClick = { Toast.makeText(context, "CLICKED", Toast.LENGTH_LONG).show() },
                 modifier = Modifier
                     .padding(
                         start = 24.dp,

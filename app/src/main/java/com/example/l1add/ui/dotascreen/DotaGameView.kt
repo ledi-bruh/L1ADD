@@ -1,5 +1,6 @@
 package com.example.l1add.ui.dotascreen
 
+import androidx.compose.runtime.Composable
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +15,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.material3.Icon
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -30,11 +30,12 @@ import com.example.l1add.ui.theme.L1ADDTheme
 @Composable
 fun DotaGameViews(
     gameViews: List<Int>,
+    contentPadding: PaddingValues,
     modifier: Modifier = Modifier,
 ) {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(16.dp),
-        contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
+        contentPadding = contentPadding,
         modifier = modifier,
     ) {
         items(gameViews) { gameView ->
@@ -48,9 +49,7 @@ fun GameView(
     gameView: Int,
     modifier: Modifier = Modifier,
 ) {
-    Box(modifier = modifier
-        .size(240.dp, 128.dp)
-    ) {
+    Box(modifier.size(240.dp, 128.dp)) {
         Image(
             painter = painterResource(gameView),
             contentDescription = "game view",
@@ -104,6 +103,7 @@ fun DotaGameViewsPreview() {
             R.drawable.video_view1,
             R.drawable.video_view2,
         ),
+        contentPadding = PaddingValues(start = 24.dp, end = 24.dp),
         modifier = Modifier,
     )
 }
