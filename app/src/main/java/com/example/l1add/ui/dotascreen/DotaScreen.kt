@@ -85,7 +85,7 @@ fun DotaScreen() {
             if (index < comments.lastIndex) {
                 Divider(
                     thickness = 1.dp,
-                    color = L1ADDTheme.BgColors.comment_divider,
+                    color = L1ADDTheme.BgColors.commentDivider,
                     modifier = Modifier
                         .padding(
                             start = 38.dp,

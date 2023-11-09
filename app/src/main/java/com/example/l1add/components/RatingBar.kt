@@ -33,7 +33,7 @@ fun RatingBar(
             Icon(
                 imageVector = star,
                 contentDescription = "rating star",
-                tint = L1ADDTheme.BgColors.star_on,
+                tint = L1ADDTheme.BgColors.starOn,
             )
         }
         if (partialStar > 0) {
@@ -41,12 +41,12 @@ fun RatingBar(
                 Icon(
                     imageVector = star,
                     contentDescription = "rating star",
-                    tint = L1ADDTheme.BgColors.star_on,
+                    tint = L1ADDTheme.BgColors.starOn,
                 )
                 Icon(
                     imageVector = star,
                     contentDescription = "rating star",
-                    tint = L1ADDTheme.BgColors.star_off,
+                    tint = L1ADDTheme.BgColors.starOff,
                     modifier = Modifier.drawWithContent {
                         clipRect(
                             left = size.width * (0.14f + 0.75f * partialStar)
@@ -61,7 +61,7 @@ fun RatingBar(
             Icon(
                 imageVector = star,
                 contentDescription = "rating star",
-                tint = L1ADDTheme.BgColors.star_off,
+                tint = L1ADDTheme.BgColors.starOff,
             )
         }
     }

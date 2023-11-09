@@ -19,7 +19,7 @@ fun DotaReviewRatings(modifier: Modifier = Modifier) {
         Text(
             text = stringResource(R.string.review_and_ratings),
             style = L1ADDTheme.TextStyle.bold(16.sp, 19.sp),
-            color = L1ADDTheme.TextColors.review_ratings,
+            color = L1ADDTheme.TextColors.reviewRatings,
         )
         ReviewRatingsBlock(
             rating = 4.73f,

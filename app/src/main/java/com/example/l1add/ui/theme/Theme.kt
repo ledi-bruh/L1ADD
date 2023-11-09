@@ -15,45 +15,45 @@ object L1ADDTheme {
             get() = Color(0xFF050B18)
         val black
             get() = Color(0xFF000000)
-        val logo_border
+        val logoBorder
             get() = Color(0xFF1F2430)
-        val game_type
+        val gameType
             get() = Color(0x3D44A9F4)
-        val comment_divider
+        val commentDivider
             get() = Color(0xFF1A1F29)
-        val star_on
+        val starOn
             get() = Color(0xFFF4D144)
-        val star_off
+        val starOff
             get() = Color(0xFF282E3E)
     }
 
     object ButtonColors {
         val install
             get() = Color(0xFFF4D144)
-        val play_video
+        val playVideo
             get() = Color(0xFFFFFFFF)
     }
 
     object TextColors {
         val description
             get() = Color(0xB3EEF2FB)
-        val review_ratings
+        val reviewRatings
             get() = Color(0xFFEEF2FB)
         val title
             get() = Color(0xFFFFFFFF)
         val downloads
             get() = Color(0xFF45454D)
-        val game_type
+        val gameType
             get() = Color(0xFF44A9F4)
         val install
             get() = Color(0xFF050B18)
         val reviews
             get() = Color(0xFFA8ADB7)
-        val comment_created_by_name
+        val commentCreatedByName
             get() = Color(0xFFFFFFFF)
-        val comment_created_at
+        val commentCreatedAt
             get() = Color(0x66FFFFFF)
-        val comment_message
+        val commentMessage
             get() = Color(0xFFA8ADB7)
     }
 

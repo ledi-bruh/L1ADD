@@ -41,12 +41,12 @@ fun DotaComment(
                 Text(
                     text = comment.createdBy.name,
                     style = L1ADDTheme.TextStyle.regular(16.sp, 19.2.sp),
-                    color = L1ADDTheme.TextColors.comment_created_by_name,
+                    color = L1ADDTheme.TextColors.commentCreatedByName,
                 )
                 Text(
                     text = comment.createdAt,
                     style = L1ADDTheme.TextStyle.regular(12.sp, 14.4.sp),
-                    color = L1ADDTheme.TextColors.comment_created_at,
+                    color = L1ADDTheme.TextColors.commentCreatedAt,
                     modifier = Modifier.padding(top = 7.dp),
                 )
             }
@@ -54,7 +54,7 @@ fun DotaComment(
         Text(
             text = "“${comment.message}”",
             style = L1ADDTheme.TextStyle.regular(12.sp, 20.sp),
-            color = L1ADDTheme.TextColors.comment_message,
+            color = L1ADDTheme.TextColors.commentMessage,
             modifier = Modifier.padding(top = 16.dp),
         )
     }

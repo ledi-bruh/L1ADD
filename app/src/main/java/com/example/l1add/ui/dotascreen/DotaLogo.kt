@@ -21,7 +21,7 @@ fun DotaLogo(modifier: Modifier = Modifier) {
     Box(modifier
         .size(88.dp)
         .clip(RoundedCornerShape(14.dp))
-        .background(color = L1ADDTheme.BgColors.logo_border)
+        .background(color = L1ADDTheme.BgColors.logoBorder)
     ) {
         Box(Modifier
             .size(84.dp)

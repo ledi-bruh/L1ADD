@@ -39,12 +39,12 @@ fun GameType(type: String, modifier: Modifier = Modifier) {
     Box(
         modifier
             .clip(RoundedCornerShape(100.dp))
-            .background(color = L1ADDTheme.BgColors.game_type)
+            .background(color = L1ADDTheme.BgColors.gameType)
             .padding(horizontal = 10.dp, vertical = 5.dp)
     ) {
         Text(
             text = type,
-            color = L1ADDTheme.TextColors.game_type,
+            color = L1ADDTheme.TextColors.gameType,
             style = L1ADDTheme.TextStyle.medium(10.sp, 12.sp),  // TODO: montserrat
         )
     }
