@@ -29,7 +29,7 @@ fun DotaScreenTitle(modifier: Modifier = Modifier) {
                 style = L1ADDTheme.TextStyle.bold(20.sp, 26.sp),
             )
             DotaRating(
-                rating = 4.9,
+                rating = 4.73f,  // round up if there is such a requirement
                 modifier = Modifier.padding(top = 6.dp),
             )
         }

@@ -14,7 +14,7 @@ import com.example.l1add.components.RatingBar
 import com.example.l1add.ui.theme.L1ADDTheme
 
 @Composable
-fun DotaRating(rating: Double, modifier: Modifier = Modifier) {
+fun DotaRating(rating: Float, modifier: Modifier = Modifier) {
     Row(modifier) {
         RatingBar(
             rating = rating,
@@ -31,8 +31,8 @@ fun DotaRating(rating: Double, modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
+@Preview
 @Composable
 fun DotaRatingPreview() {
-    DotaRating(rating = 4.9)
+    DotaRating(rating = 3.69f)
 }

@@ -22,7 +22,7 @@ fun DotaReviewRatings(modifier: Modifier = Modifier) {
             color = L1ADDTheme.TextColors.review_ratings,
         )
         ReviewRatingsBlock(
-            rating = 4.9,
+            rating = 4.73f,
             reviews = "70M",
             modifier = Modifier.padding(top = 12.dp),
         )
