@@ -1,70 +1,113 @@
 package com.example.l1add.ui.theme
 
-import android.app.Activity
-import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.PlatformTextStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.unit.TextUnit
 
-private val DarkColorScheme = darkColorScheme(
-        primary = Purple80,
-        secondary = PurpleGrey80,
-        tertiary = Pink80
-)
+object L1ADDTheme {
+    object BgColors {
+        val dark
+            get() = Color(0xFF050B18)
+        val black
+            get() = Color(0xFF000000)
+        val logoBorder
+            get() = Color(0xFF1F2430)
+        val gameType
+            get() = Color(0x3D44A9F4)
+        val commentDivider
+            get() = Color(0xFF1A1F29)
+        val starOn
+            get() = Color(0xFFF4D144)
+        val starOff
+            get() = Color(0xFF282E3E)
+    }
 
-private val LightColorScheme = lightColorScheme(
-        primary = Purple40,
-        secondary = PurpleGrey40,
-        tertiary = Pink40
+    object ButtonColors {
+        val install
+            get() = Color(0xFFF4D144)
+        val playVideo
+            get() = Color(0xFFFFFFFF)
+    }
 
-        /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
-)
+    object TextColors {
+        val description
+            get() = Color(0xB3EEF2FB)
+        val reviewRatings
+            get() = Color(0xFFEEF2FB)
+        val title
+            get() = Color(0xFFFFFFFF)
+        val downloads
+            get() = Color(0xFF45454D)
+        val gameType
+            get() = Color(0xFF44A9F4)
+        val install
+            get() = Color(0xFF050B18)
+        val reviews
+            get() = Color(0xFFA8ADB7)
+        val commentCreatedByName
+            get() = Color(0xFFFFFFFF)
+        val commentCreatedAt
+            get() = Color(0x66FFFFFF)
+        val commentMessage
+            get() = Color(0xFFA8ADB7)
+    }
+
+    object TextStyle {
+        @Composable
+        fun regular(fontSize: TextUnit, lineHeight: TextUnit): androidx.compose.ui.text.TextStyle {
+            return TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Normal,
+                fontSize = fontSize,
+                lineHeight = lineHeight,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional,
+                    LineHeightStyle.Trim.None,
+                )
+            )
+        }
+        @Composable
+        fun medium(fontSize: TextUnit, lineHeight: TextUnit): androidx.compose.ui.text.TextStyle {
+            return TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Medium,
+                fontSize = fontSize,
+                lineHeight = lineHeight,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional,
+                    LineHeightStyle.Trim.None,
+                )
+            )
+        }
+        @Composable
+        fun bold(fontSize: TextUnit, lineHeight: TextUnit): androidx.compose.ui.text.TextStyle {
+            return TextStyle(
+                fontFamily = FontFamily,
+                fontWeight = FontWeight.Bold,
+                fontSize = fontSize,
+                lineHeight = lineHeight,
+                platformStyle = PlatformTextStyle(includeFontPadding = false),
+                lineHeightStyle = LineHeightStyle(
+                    LineHeightStyle.Alignment.Proportional,
+                    LineHeightStyle.Trim.None,
+                )
+            )
+        }
+    }
+}
 
 @Composable
 fun L1ADDTheme(
-        darkTheme: Boolean = isSystemInDarkTheme(),
-        // Dynamic color is available on Android 12+
-        dynamicColor: Boolean = true,
-        content: @Composable () -> Unit
+    content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+    MaterialTheme{
+        content()
     }
-    val view = LocalView.current
-    if (!view.isInEditMode) {
-        SideEffect {
-            val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
-        }
-    }
-
-    MaterialTheme(
-            colorScheme = colorScheme,
-            typography = Typography,
-            content = content
-    )
 }
